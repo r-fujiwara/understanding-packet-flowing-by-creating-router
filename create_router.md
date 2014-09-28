@@ -32,16 +32,16 @@ http://www.c-tipsref.com/reference/stdio/snprintf.html
 
 /* main */
 int main(void) {
-    char s[N] = {'\0'};
-    char name[] = "チャーリー・ブラウン";
-    char sex[] = "男性";
-    int age = 4;
+	char s[N] = {'\0'};
+	char name[] = "チャーリー・ブラウン";
+	char sex[] = "男性";
+	int age = 4;
 
-    snprintf(s, N, "%sさんは%d歳の%sです．", name, age, sex);
+	snprintf(s, N, "%sさんは%d歳の%sです．", name, age, sex);
 
-    printf("%s\n", s); 
+	printf("%s\n", s); 
 
-    return EXIT_SUCCESS;
+	return EXIT_SUCCESS;
 }
 ```
 
@@ -96,8 +96,14 @@ http://blog.clouder.jp/blog/2008/12/12/u-intu-char/
 
 ##構造体のキャストって何？
 
+https://github.com/r-fujiwara/understanding-packet-flowing-by-creating-router/blob/master/chapter3/analyze.c#L40
 
+- 以下のように文字列を構造体にキャストするとはどういうことか？
 
 ```
+u_char *ptr;
+struct ether_header *arp;
 
+arp = (struct ether_arp *)ptr
 ```
+
