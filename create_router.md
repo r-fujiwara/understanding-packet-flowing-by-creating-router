@@ -93,6 +93,8 @@ http://blog.clouder.jp/blog/2008/12/12/u-intu-char/
 ##return(-1)とかreturn(0)とかの違いって何？
 
 - 勘だけど`return(-1)`だとエラーで終了の感じを出すのかな？
+  - 正常な時は`0`を返して異常な時は、`-1`をreturnするようにする。
+
 
 ##構造体のキャストって何？
 
@@ -106,4 +108,6 @@ struct ether_header *arp;
 
 arp = (struct ether_arp *)ptr
 ```
+
+=> とりあえず型が決まってないから？質問してみたがコードの意図がよく分からないようだった。
 
